@@ -5,7 +5,8 @@ class WebsiteTestCase(unittest.TestCase):
     def test_website_load(self):
         url = 'https://atg.world/'
         response = requests.get(url)
-        self.assertEqual(response.status_code, 200, f"Failed to load website: {url}")
+        self.assertEqual(response.status_code, 200, "Failed to load website: %s" % url)
+        # self.assertEqual(response.status_code, 200, f"Failed to load website: {url}")
         print(f"Received response with status code: {response.status_code}")
 
 
