@@ -6,8 +6,7 @@ class WebsiteTestCase(unittest.TestCase):
         url = 'https://atg.world/'
         response = requests.get(url)
         self.assertEqual(response.status_code, 200, "Failed to load website: %s" % url)
-        # self.assertEqual(response.status_code, 200, f"Failed to load website: {url}")
-        print(f"Received response with status code: {response.status_code}")
+        print("Received response with status code: %d" % response.status_code)
 
 
 if __name__ == '__main__':
